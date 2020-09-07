@@ -1,5 +1,5 @@
 {
-    "name": "asi/yii2-loki-log-target",
+    "name": "asinfotrack/yii2-loki-log-target",
     "description": "Loki log target",
     "type": "yii2-extension",
     "keywords": ["yii2", "loki"],

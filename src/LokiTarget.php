@@ -24,7 +24,7 @@ class LokiTarget extends \yii\log\Target
 		// group by level
 		$grouped = [];
 		foreach ($this->messages as $message) {
-			[$text, $level, $category, $timestamp] = $message;
+			[$_, $level, $_, $_] = $message;
 			$grouped[$level][] = $message;
 		}
 
