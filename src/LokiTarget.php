@@ -9,6 +9,8 @@ class LokiTarget extends \yii\log\Target
 
 	public $url;
 	public $labels;
+	public $basic_username;
+	public $basic_password;
 
 	public function init()
 	{
@@ -48,6 +50,10 @@ class LokiTarget extends \yii\log\Target
 		curl_setopt($curl, CURLOPT_HTTPHEADER, [
 			'Content-Type: application/json',
 		]);
+
+		if (!empty($this->basic_username)) {
+			curl_setopt($curl, CURLOPT_USERPWD, $this->basic_username . ':' . $this->basic_password);
+		}
 
 		$payload = new \stdClass();
 		$payload->streams = [];
