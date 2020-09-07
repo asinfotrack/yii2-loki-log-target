@@ -14,5 +14,10 @@
     "require": {
         "php": ">=7.1.0",
         "yiisoft/yii2": "~2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "asinfotrack\\yii2\\log": "src"
+        }
     }
 }
