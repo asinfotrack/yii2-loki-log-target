@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "asinfotrack\\yii2\\log": "src"
+            "asinfotrack\\yii2\\log\\": "src"
         }
     }
 }
