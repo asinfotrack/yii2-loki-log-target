@@ -12,9 +12,9 @@ class LokiTarget extends \yii\log\Target
 	public $basic_username;
 	public $basic_password;
 
-    /**
-     * @var int cURL execution timeout (seconds)
-     */
+	/**
+	* @var int cURL execution timeout (seconds)
+	*/
 	public $timeout = 0;
 
 	public function init()
@@ -83,8 +83,8 @@ class LokiTarget extends \yii\log\Target
 		curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 		if($this->timeout > 0) {
-            curl_setopt($curl, CURLOPT_TIMEOUT, $this->timeout);
-        }
+			curl_setopt($curl, CURLOPT_TIMEOUT, $this->timeout);
+		}
 
 		$result = curl_exec($curl);
 		curl_close($curl);
